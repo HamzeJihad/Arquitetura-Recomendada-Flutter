@@ -16,9 +16,6 @@ Este projeto serve como um guia prático para desenvolvedores Flutter que deseja
 
 A arquitetura deste projeto é uma combinação dos princípios da **Clean Architecture** com o padrão **MVVM (Model-View-ViewModel)**. Essa abordagem visa uma clara separação de responsabilidades, facilitando os testes, a reutilização de código e a evolução do projeto.
 
-<p align="center">
-  <img src="https://i.imgur.com/fk3S3Vz.png" alt="Arquitetura MVVM com Clean Architecture" width="700"/>
-</p>
 
 A aplicação é dividida em três camadas principais:
 

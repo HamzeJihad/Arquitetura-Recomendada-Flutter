@@ -6,7 +6,7 @@ import 'package:flutter/widgets.dart';
 class TodoViewmodel extends ChangeNotifier {
   late final Command0<List<Todo>> load;
   late final Command1<Todo, Todo> addTodo;
-late final Command1<String, String> removeTodo;
+  late final Command1<String, String> removeTodo;
 
   List<Todo> _todos = [];
   List<Todo> get todos => _todos;
@@ -24,7 +24,7 @@ late final Command1<String, String> removeTodo;
         Todo(id: '1', name: 'Todo 1', done: false, description: 'Description for Todo 1'),
         Todo(id: '2', name: 'Todo 2', done: true, description: 'Description for Todo 2'),
       ];
-      notifyListeners(); 
+      notifyListeners();
       return Result.ok(_todos);
     } catch (e) {
       return Result.error(Exception('Failed to load todos'));
@@ -33,7 +33,7 @@ late final Command1<String, String> removeTodo;
 
   Future<Result<Todo>> _addTodo(Todo todo) async {
     try {
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 2));
       _todos.add(todo);
       notifyListeners();
       return Result.ok(todo);

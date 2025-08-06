@@ -12,14 +12,14 @@ late final Command1<String, String> removeTodo;
   List<Todo> get todos => _todos;
 
   TodoViewmodel() {
-    load = Command0<List<Todo>>(_load);
+    load = Command0<List<Todo>>(_load)..execute();
     addTodo = Command1<Todo, Todo>(_addTodo);
     removeTodo = Command1<String, String>(_removeTodo);
   }
 
   Future<Result<List<Todo>>> _load() async {
     try {
-      await Future.delayed(const Duration(seconds: 1));
+      await Future.delayed(const Duration(seconds: 3));
       _todos = [
         Todo(id: '1', name: 'Todo 1', done: false, description: 'Description for Todo 1'),
         Todo(id: '2', name: 'Todo 2', done: true, description: 'Description for Todo 2'),
